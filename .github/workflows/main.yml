@@ -1,0 +1,21 @@
+name: My First CI Pipeline
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Run a one-line script
+      run: echo "Hello, DevOps! My code is building..."
+
+    - name: Simulate a Build
+      run: |
+        echo "Building the application..."
+        sleep 3
+        echo "Build successful!"
